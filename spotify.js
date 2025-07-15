@@ -16,7 +16,7 @@ function secondTominute(seconds){
 }
 
     async function getsongs() {
-    let a = await fetch("https://github.com/Devesh-08/project1/tree/2335380a678ef4c4b2ec89043a318b565ed86c21/songs");
+    let a = await fetch("http://127.0.0.1:3000/spotify/songs/");
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
