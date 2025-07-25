@@ -16,7 +16,7 @@ function secondTominute(seconds){
 }
 
     async function getsongs() {
-    let a = await fetch("http://127.0.0.1:3000/spotify/songs/");
+    let a = await fetch("http://127.0.0.1:3000/spotify/local/songs/");
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -32,7 +32,7 @@ function secondTominute(seconds){
     return songs
 }
 const playmusic=(track,pause=false)=>{
-    currentsong.src="/spotify/songs/"+track;
+    currentsong.src="/local/songs/"+track;
     currentsong.play();
     playbutton.src="svg/pause.svg"
     document.querySelector(".songinfo").innerHTML=decodeURI(track);
