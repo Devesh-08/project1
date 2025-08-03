@@ -16,7 +16,7 @@ function secondTominute(seconds){
 }
 
     async function getsongs() {
-    let a = await fetch("/spotify/public/songs/");
+    let a = await fetch("http://127.0.0.1:3000/spotify/public/songs/");
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -126,4 +126,5 @@ main()
 //         console.log("No songs found.");
 //     }
 // });
+
 
